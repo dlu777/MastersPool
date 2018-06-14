@@ -1,5 +1,5 @@
 const User = require('./user');
-const Player = require('.player');
+const Player = require('./player');
 
 /**
  * If we had any associations to make, this would be a great place to put them!
