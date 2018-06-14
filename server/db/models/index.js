@@ -15,8 +15,8 @@ const Player = require('./player');
  * instead of: const User = require('../db/models/user')
  */
 
-Player.belongsToMany(User, {through: UserPlayer} );
-User.belongsToMany(Player, {through: UserPlayer} );
+Player.belongsToMany(User, {through: 'UserPlayer'} );
+User.belongsToMany(Player, {through: 'UserPlayer'} );
 
 module.exports = {
   User,
