@@ -9,15 +9,12 @@ module.exports = router;
 
 router.get('/players', (req,res,next)=>{
   Player.findAll({where: {
-    userId
+    userId: parseInt(req.sessions.passport.user)
   }})
-  User.findById(req.sessions.passport.user)
-    .then(user => {
-      req.session.user = user;
-      res.send('user found');
-    });
 })
 
-router.post('/addplayer', (req,res,next)=>{
+router.post('/add-player', (req,res,next)=>{
 
 })
+
+router.delete('/remove-player')

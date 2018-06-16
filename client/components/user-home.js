@@ -11,6 +11,8 @@ export const UserHome = (props) => {
   return (
     <div>
       <h3>Welcome, {email}</h3>
+      <br />
+      <h4>Your players: </h4>
     </div>
   )
 }
