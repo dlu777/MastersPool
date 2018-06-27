@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import PlayerList from './PlayerList'
+import {fetchUserPlayers} from '../store'
 
 /**
  * COMPONENT
@@ -12,7 +15,8 @@ export const UserHome = (props) => {
     <div>
       <h3>Welcome, {email}</h3>
       <br />
-      <h4>Your players: </h4>
+      <PlayerList />
+      <Link to='/add-player'>Add Player</Link>
     </div>
   )
 }

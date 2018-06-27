@@ -1,3 +1,5 @@
+// const Sequelize = require('sequelize');
+const db = require('../db');
 const User = require('./user');
 const Player = require('./player');
 
@@ -15,10 +17,13 @@ const Player = require('./player');
  * instead of: const User = require('../db/models/user')
  */
 
-Player.belongsToMany(User, {through: 'UserPlayer'} );
-User.belongsToMany(Player, {through: 'UserPlayer'} );
+const UserPlayers = db.define('UserPlayers')
+
+Player.belongsToMany(User, {through: UserPlayers} );
+User.belongsToMany(Player, {through: UserPlayers} );
 
 module.exports = {
   User,
-  Player
+  Player,
+  UserPlayers
 }

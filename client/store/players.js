@@ -15,6 +15,7 @@ const createPlayer = player => ({type: CREATE_PLAYER, player});
 const editPlayer = player => ({type: EDIT_PLAYER, player});
 const deletePlayer = id => ({type: DELETE_PLAYER, id});
 
+
 //thunk creators
 
 export const fetchPlayers = () =>
